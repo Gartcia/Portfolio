@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PortFolio</title>
+</head>
+<body>
+    <header class="head-conteiner">
+        <div class="icon-toggle">
+            <img class="icon" src="images/art.png" alt="art">
+            <div class="toggle">
+                <i class="menu-button"></i>
+            </div>
+        </div>
+        <div class="nav-conteiner">
+            <nav class="nav">
+                <ul class="li-conteiner">
+                    <li>
+                        <a href="#home" class="scroll-link">home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="scroll-link">about</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="scroll-link">projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="scroll-link">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="section" id="home">
+        <div class="text">
+            <p>hello there!</p>
+            <h1>i'm gaston a</h1>
+            <h1 id="space">frontend developer</h1>
+            <div class="flag-text">
+                <img class="flag" src="images/arg.png" alt="Argentina">
+                <h3>Front End Developer | HTML-CSS-JS</h3>
+            </div>
+        </div>
+        <img class="me" src="images/me.png" alt="me">
+    </section>
+    <section class="section" id="about">
+        <div class="split-ball"></div>
+        <div class="split-ball"></div>
+        <div class="split-ball"></div>
+        <div class="text">
+            <p>let's talk</p>
+            <h1>about <span>me</span></h1>
+            <i>I’m a Front-End Developer located in Argentina. I am passionate about technology, since I was a child I have started to investigate and gain knowledge about new technologies.<br>
+                Well organized person, problem solver, currently working on a gastronomic software.<br>
+                Good social relations and great leadership.<br>
+                Working on my own projects to grow as a web developer and studying new technologies to be the best.
+            </i>
+        </div>
+    </section>
+    <section class="section" id="projects">
+        <div class="text">
+            <h1>my projects</h1>
+        </div>
+        <div class="projects-conteiner">
+            <div class="conteiner-slides">
+                <div class="grid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <div class="split-ball"></div>
+        <div class="text">
+            <p>have a job?</p>
+            <h1>contact <span>me</span></h1>
+        </div>
+            <form action="mail" class="form-conteiner">
+                <div class="name-email">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" name="message" id="message" placeholder="Message" required>
+                <input type="submit" name="submit" id="submit" value="Send">
+            </form>
+    </section>
+    <a href="#home" class="back-top scroll-link">
+        <img id="to-up" src="images/up-arrow.png" alt="up-arrow">
+    </a>
+    <script src="app.js"></script>
+</body>
+</html>
