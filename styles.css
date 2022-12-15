@@ -464,13 +464,15 @@ input:focus, textarea:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 320px;
     height: 40px;
     background-color: var(--clr-back);
     color: var(--clr-text);
     font-family: var(--font-inter);
     border:none;
     border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
     gap: 20px;
     text-transform: uppercase;
     font-weight: 700;
@@ -566,7 +568,7 @@ input:focus, textarea:focus{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 50px;
+        padding-left: 50px;
     }
     .split-ball{
         left: 0;
