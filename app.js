@@ -42,6 +42,30 @@ const projects = [
     },
 ]
 
+//This is the email send
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_i3xt3ty';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send';
+      alert('The email was properly sent!');
+    }, (err) => {
+      btn.value = 'Send';
+      alert(JSON.stringify(err));
+    });
+});
+
+//Here finish the email send
+
 toggle.addEventListener("click", function(){
     const conteinerHeight = navConteiner.getBoundingClientRect().height;
     const linksHeight = linksConteiner.getBoundingClientRect().height;

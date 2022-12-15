@@ -98,7 +98,7 @@
             <p>have a job?</p>
             <h1>contact <span>me</span></h1>
         </div>
-        <form action="mail" class="form-conteiner">
+        <form action="mail" class="form-conteiner" id="form">
             <div class="name-email">
                 <input type="text" name="name" id="name" placeholder="Name" required>
                 <input type="email" name="email" id="email" placeholder="Email" required>
@@ -106,7 +106,7 @@
             <input type="text" name="subject" id="subject" placeholder="Subject" required>
             <textarea name="message" id="message" placeholder="Message"></textarea>
             <div class="submit">
-                <input type="submit" name="submit" id="submit" value="Send">
+                <input type="submit" name="submit" id="button" value="Send">
             </div>
         </form>
         <div class="split-ball"></div>
@@ -116,5 +116,11 @@
         <img id="to-up" src="images/up-arrow.png" alt="up-arrow">
     </a>
     <script src="app.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('_hnLObylJUOmdaxWe')
+    </script>
 </body>
 </html>

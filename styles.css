@@ -428,7 +428,7 @@ input:focus, textarea:focus{
     text-align: start;
     height: 100%;
 }
-#submit{
+#button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -443,7 +443,7 @@ input:focus, textarea:focus{
     width: 300px;
     height: 40px;
 }
-#submit:hover{
+#button:hover{
     color: var(--clr-text);
     background-color: var(--clr-back2);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
@@ -505,7 +505,7 @@ input:focus, textarea:focus{
     #message{
         font-size: 15px;
     }
-    #submit{
+    #button{
         height: 20px;
     }
 }
@@ -615,7 +615,7 @@ input:focus, textarea:focus{
     .name-email{
         flex-direction: row;
     }
-    #submit{
+    #button{
         display: flex;
         justify-content: center;
         align-items: center;
