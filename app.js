@@ -11,6 +11,7 @@ const slide = document.querySelector(".grid");
 const preNextBtn = document.querySelectorAll(".arrow");
 const close = document.querySelector(".close-btn");
 const modal = document.querySelector(".modal-overlay")
+const preloader = document.querySelector(".preloader-conteiner")
 const projects = [
     {
         name: "Colour Shifter",
@@ -145,3 +146,11 @@ const displayProjects = function(projects){
 }
 
 //Finish Scroll One//
+
+//Preloader//
+
+window.addEventListener("load", function(){
+    preloader.classList.add("hide-preloader");
+})
+
+//Preloader//

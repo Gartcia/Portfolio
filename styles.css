@@ -322,6 +322,27 @@
 }
 /* This is to fix the home id */
 
+/*Preload page*/
+
+.preloader-conteiner{
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    z-index: 999;
+    background-color: #030303;
+}
+.hide-preloader{
+    z-index: -999;
+}
+
+/*Preload page*/
+
+
 .conteiner-slides{
     position: relative;
     display: flex;
