@@ -335,7 +335,6 @@
     margin-top: 20px;
     position: absolute;
     top: 0;
-    padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -415,15 +414,14 @@ input, textarea{
     font-family: var(--font-inter);
     font-weight: 500;
     text-align: start;
-    text-indent: 10px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 }
 input:focus, textarea:focus{
     outline: 3px solid var(--clr-back2);
 }
 #message{
+    padding-left: 10px;
     resize: none;
-    text-indent: none;
     text-align: start;
     height: 100%;
 }
@@ -673,6 +671,12 @@ input:focus, textarea:focus{
     .submit{
         justify-content: flex-end;
         text-align: center;
+    }
+    .git-projects{
+        font-size: 15px;
+        width: 320px;
+        gap: 20px;
+        font-weight: 700;
     }
 }
 @media (min-width:1400px) {

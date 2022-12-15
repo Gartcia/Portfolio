@@ -136,7 +136,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 const displayProjects = function(projects){
     const anyProject = projects.map(function(project){
-        return `<a class="a-projects" href="${project.link}">
+        return `<a class="a-projects" href="${project.link}" target="_blank">
         <h3>${project.name}</h3>
         <img class="img-project" src="${project.img}" alt="${project.name}">
         </a>`
