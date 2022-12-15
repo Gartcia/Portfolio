@@ -76,7 +76,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 10vh;
     z-index: 999;
 }
 .social{
@@ -161,7 +160,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
 }
 #home{
     height: 100vh;
@@ -424,7 +423,7 @@ input:focus, textarea:focus{
 }
 #message{
     resize: none;
-    text-indent: 10px;
+    text-indent: none;
     text-align: start;
     height: 100%;
 }
@@ -483,6 +482,53 @@ input:focus, textarea:focus{
 .git-projects:hover{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
+
+/*start modal for email*/
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    visibility:hidden;
+    overflow: hidden;
+}
+.modal-conteiner{
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 30vw;
+    height: 30vh;
+    font-family: var(--font-inter);
+    gap: 30px;
+}
+.modal-conteiner h3{
+    font-family: var(--font-fredoka);
+}
+.close-btn{
+    cursor: pointer;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.2s;
+}
+.close-btn:hover{
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+}
+/*finish modal for email*/
+
 @media (max-height:600px){
     .me{
         display: none;

@@ -9,6 +9,8 @@ const backToTop = document.querySelector(".back-top");
 const recuadro = document.querySelector(".conteiner-slides");
 const slide = document.querySelector(".grid");
 const preNextBtn = document.querySelectorAll(".arrow");
+const close = document.querySelector(".close-btn");
+const modal = document.querySelector(".modal-overlay")
 const projects = [
     {
         name: "Colour Shifter",
@@ -57,12 +59,18 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send';
-      alert('The email was properly sent!');
+      modal.style.visibility = "visible";
+      modal.style.zIndex = 999;
     }, (err) => {
       btn.value = 'Send';
       alert(JSON.stringify(err));
     });
 });
+
+close.addEventListener("click", function(){
+    modal.style.visibility = "hidden";
+    modal.style.zIndex = -10;
+})
 
 //Here finish the email send
 
@@ -103,7 +111,7 @@ navLinks.forEach(function(link){
         const conteinerHeight = headConteiner.getBoundingClientRect().height; 
         const navHeight = navConteiner.getBoundingClientRect().height;
         // i take out the height of the .li-conteiner and add the height of the real header
-        let position = element.offsetTop - conteinerHeight;
+        let position = element.offsetTop - conteinerHeight + navHeight;
         window.scrollTo({
             left: 0,
             top: position,
