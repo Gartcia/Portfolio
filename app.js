@@ -154,3 +154,26 @@ window.addEventListener("load", function(){
 })
 
 //Preloader//
+
+//Change color variables//
+
+var root = document.querySelector(':root');
+const Beige = "#F3EFE0";
+const LightGrey = "#434242";
+const DarkGrey = "#222222";
+const LovelyGreen = "#22A39F";    
+const changeColor = document.querySelector(".color-conteiner");
+
+changeColor.addEventListener("click", function(){
+    if(!changeColor.classList.contains("back")){
+        root.style.setProperty('--clr-back', LovelyGreen);
+        root.style.setProperty('--clr-back2', Beige);
+        changeColor.classList.add("back");
+    } else {
+        root.style.setProperty('--clr-back', Beige);
+        root.style.setProperty('--clr-back2', LovelyGreen);
+        changeColor.classList.remove("back");
+    }
+})
+
+//Change color variables//
