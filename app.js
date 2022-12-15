@@ -88,7 +88,7 @@ navLinks.forEach(function(link){
             navConteiner.style.height = `0px`;
             menuBurger.classList.toggle("menu-buttonx");
         }
-        if(window.innerWidth >= 1000){
+        if(window.innerWidth >= 650){
         navConteiner.style.height = `100%`;
         button.classList.remove("menu-buttonx");
         }

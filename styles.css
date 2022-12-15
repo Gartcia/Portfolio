@@ -243,9 +243,9 @@
     width: 90%;
     height: 80%;
     background-color: var(--clr-boxes);
-    border-radius: 10px;
+    border-radius: 3px;
     margin-top: 20px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
 }
 /* This is the buttom to go back home */
 
@@ -339,6 +339,7 @@
     background-color: var(--clr-back);
     height: 27vh;
     max-width: 700px;
+    border-radius: 3px;
     margin: auto;
     overflow: hidden;
     border: 3px solid var(--clr-back);
@@ -360,7 +361,7 @@
     align-items: center;
     width: 90%;
     height: 50%;
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: 0 0 10px black;
     background-color: var(--clr-boxes);
     gap: 20px;
@@ -374,21 +375,28 @@
     justify-content: space-between;
     gap: 20px;
 }
-input{
+input, textarea{
     border:none;
     background-color: var(--clr-back);
     color: var(--clr-text);
     width: 100%;
     height: 40px;
-    border-radius: 5px;
-    font-size: 30px;
-    font-family: var(--font-fredoka);
+    border-radius: 3px;
+    font-size: 25px;
+    font-family: var(--font-inter);
     font-weight: 500;
-    text-align: center;
+    text-align: start;
+    text-indent: 10px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 }
+input:focus, textarea:focus{
+    outline: 3px solid var(--clr-back2);
+}
 #message{
-    height: 80%;
+    resize: none;
+    text-indent: 10px;
+    text-align: start;
+    height: 100%;
 }
 #submit{
     display: flex;
@@ -437,9 +445,44 @@ input{
     gap: 20px;
     text-transform: uppercase;
     font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .git-projects img{
     width: 20px;
+}
+.git-projects:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+@media (max-height:600px){
+    .me{
+        display: none;
+    }
+    #about .text i{
+        font-size: 15px;
+    }
+    .form-conteiner{
+        margin: 10px;
+        gap: 5px;
+    }
+    .name-email{
+        flex-direction: row;
+        height: 20px;
+    }
+    input{
+        font-size: 15px;
+        height: 20px;
+    }
+    #message{
+        font-size: 15px;
+    }
+    #submit{
+        height: 20px;
+    }
+}
+@media (max-height:800px){
+    .split-ball{
+        display: none;
+    }
 }
 @media (min-width:650px) {
     .split-ball{
@@ -453,6 +496,9 @@ input{
         width: auto;
     }
     .menu-button{
+        display: none;
+    }
+    .toggle{
         display: none;
     }
     .nav-conteiner{
