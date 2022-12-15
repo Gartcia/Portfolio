@@ -30,6 +30,16 @@ const projects = [
         img:"images/Scroll.png",
         link:"https://gartcia.github.io/Scroll/",
     },
+    {
+        name: "Modal",
+        img:"images/Modal.png",
+        link:"https://gartcia.github.io/Modal/",
+    },
+    {
+        name: "Questions",
+        img:"images/Questions.png",
+        link:"https://gartcia.github.io/Questions/",
+    },
 ]
 
 toggle.addEventListener("click", function(){

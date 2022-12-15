@@ -185,7 +185,7 @@
     position: relative;
     background-color: var(--clr-back);
 }
-.split-ball, .split-ball:nth-child(4){
+.split-ball{
     content: "";
     position: absolute;
     background-color: var(--clr-back2);
@@ -196,7 +196,7 @@
     border-radius: 0 0 150px 150px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
-.split-ball:nth-child(2){
+.split-ball:nth-child(2), .split-ball:nth-child(5){
     top: 200px;
     left: 1500px;
     width: 500px;
@@ -204,9 +204,10 @@
     background-image: linear-gradient( #1e888480, var(--clr-back2), #e2ded186 ,var(--clr-back));
     transform: rotate(-45deg);
     border-radius: 50%;
-    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.589));
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.247);
 }
-.split-ball:nth-child(3){
+.split-ball:nth-child(3), .split-ball:nth-child(4){
     top: 700px;
     left: 1000px;
     width: 300px;
@@ -214,7 +215,8 @@
     border-radius: 50%;
     background-image: linear-gradient( #1e8884c5, var(--clr-back2), #e2ded14b ,var(--clr-back));
     transform: rotate(-45deg);
-    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.589));
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.247);
 }
 .text span{
     color: var(--clr-back2);
@@ -299,15 +301,19 @@
     width: 90%;
     height: 100%;
     overflow: hidden;
-    overflow-y: scroll;
 }
 .grid{
+    position: absolute;
+    top: 0;
     padding-top: 20px;
     padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     width: 100%;
+    height: 90%;
+    overflow: hidden;
+    overflow-y: auto;
     transition: ease-in-out 0.4s;
 }
 .a-projects{
@@ -317,7 +323,7 @@
     font-family: var(--font-inter);
     display: block;
     background-color: var(--clr-back);
-    height: 30vh;
+    height: 27vh;
     max-width: 700px;
     margin: auto;
     overflow: hidden;
@@ -360,17 +366,60 @@ input{
     color: var(--clr-text);
     width: 100%;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 30px;
     font-family: var(--font-fredoka);
     font-weight: 500;
     text-align: center;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 }
 #message{
     height: 80%;
 }
 #submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--clr-text);
+    background-color: var(--clr-back);
+    transition: 0.2s;
+}
+#submit:hover{
+    color: var(--clr-text);
     background-color: var(--clr-back2);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    background-color: transparent;
+    color: var(--clr-text);
+    width: 100%;
+    height: 40px;
+}
+.git-projects{
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    background-color: var(--clr-back);
+    color: var(--clr-text);
+    font-family: var(--font-inter);
+    border:none;
+    border-radius: 5px;
+    gap: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.git-projects img{
+    width: 20px;
 }
 @media (min-width:650px) {
     .split-ball{
@@ -443,10 +492,37 @@ input{
     }
     .text i{
         font-size: 25px;
-    }
+    } 
+}
+@media (min-width:1000px) {
     .grid{
         grid-template-columns: 1fr 1fr;
-    }    
+    } 
+    .form-conteiner{
+        width: 50%;
+        margin-left: 50px;
+    }   
+    #contact{
+        align-items: flex-start;
+    }
+    input{
+        text-align: start;
+        padding-left: 10px;
+    }
+    .name-email{
+        flex-direction: row;
+    }
+    #submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        padding: 0;
+    }
+    .submit{
+        justify-content: flex-end;
+        text-align: center;
+    }
 }
 @media (min-width:1400px) {
     .li-conteiner li a{
