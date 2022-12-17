@@ -101,9 +101,6 @@
     cursor: pointer;
     height: 30px;
 }
-.social{
-    display: none;
-}
 .icon-toggle{
     width: 90%;
     display: flex;
@@ -449,8 +446,8 @@
 }
 input, textarea{
     border:none;
-    background-color: var(--clr-back);
-    color: var(--clr-text);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
     width: 100%;
     height: 40px;
     border-radius: 3px;
@@ -464,7 +461,6 @@ input:focus, textarea:focus{
     outline: 3px solid var(--clr-back2);
 }
 #message{
-    padding-left: 10px;
     resize: none;
     text-align: start;
     height: 100%;
@@ -572,7 +568,26 @@ input:focus, textarea:focus{
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
 }
 /*finish modal for email*/
-
+/*change language*/
+.change-conteiner{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--clr-back);
+    transition: 0.2s;
+}
+.change-conteiner:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.change-language{
+    text-decoration: none;
+    color: var(--clr-text);
+}
+/*change language*/
 @media (max-height:600px){
     .me{
         display: none;
@@ -688,6 +703,9 @@ input:focus, textarea:focus{
     } 
 }
 @media (min-width:1000px) {
+    .change-conteiner{
+        margin-left: 30px;
+    }
     .color-conteiner{
         margin-left: 30px;
     }
@@ -701,7 +719,7 @@ input:focus, textarea:focus{
     #contact{
         align-items: flex-start;
     }
-    input{
+    input, textarea{
         text-align: start;
         padding-left: 10px;
     }
