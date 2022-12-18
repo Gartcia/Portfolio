@@ -225,8 +225,8 @@
 .me{
     position: absolute;
     bottom: 0;
-    width: 100vw;
-    filter: drop-shadow(0 0 10px black);
+    width: 100%;
+    filter: drop-shadow(0 0 100px black);
     max-width: 400px;
     margin: auto;
 }
@@ -578,6 +578,7 @@ input:focus, textarea:focus{
     height: 30px;
     border-radius: 50%;
     background-color: var(--clr-back);
+    font-family: var(--font-inter);
     transition: 0.2s;
 }
 .change-conteiner:hover{
@@ -772,5 +773,8 @@ input:focus, textarea:focus{
     }
     .grid{
         grid-template-columns: 1fr 1fr 1fr;
-    }    
+    }
+    .me{
+        height: auto;
+    }
 }
